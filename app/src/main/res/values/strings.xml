@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Someday</string>
+    <string name="appwidget_text">SomeDay</string>
+
+    <string name="about_content">
+        　　此软件为西北民族大学系统设计工作室Android程序设计小组组长的开发软件，此软件现阶段为试用版，仅可以实现一小部分功能，其余功能待日后上线。
+
+    </string>
+    <string name="copyRight">
+        Copyright © 2018 - 2018 Xtsjgzs.All Rights Reserved.
+    </string>
+    <string name="QQNumber">
+        　 本人QQ：1152557928\n
+        \n
+        安卓小组QQ群：187718895
+    </string>
+    <string name="choose_day">选择要显示的日子</string>
+    <string name="nolonger_remind_text">
+    注意：\n提醒功能需要让程序在后台运行，请到设置中的权限管理中将后台运行权限改为允许运行。
+</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+</resources>

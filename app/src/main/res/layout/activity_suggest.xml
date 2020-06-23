@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:padding="10dp"
+    tools:context=".activity.SuggestActivity">
+    <ImageView
+        android:id="@+id/iv_suggest_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/selector_back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:text="意见反馈"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="7dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_suggest_back"
+        android:layout_marginLeft="25dp"
+        android:textColor="#f39c12"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/suggest_view"
+        app:layout_constraintTop_toBottomOf="@+id/iv_suggest_back"
+        android:layout_marginTop="15dp"
+        android:background="#f39c12"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:id="@+id/tv_suggest_title"
+        android:textSize="20dp"
+        android:text="标题："
+        android:textStyle="bold"
+        android:textColor="#f39c12"
+        app:layout_constraintTop_toBottomOf="@+id/suggest_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_suggest_title"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_suggest_title"
+        android:layout_width="match_parent"
+        android:background="@drawable/clshape"
+        android:textColor="#595959"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:singleLine="true"
+        android:padding="3dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_suggest_context"
+        android:textSize="20dp"
+        android:text="内容："
+        android:textColor="#f39c12"
+        app:layout_constraintTop_toBottomOf="@+id/et_suggest_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_suggest_context"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:inputType="textMultiLine"
+        android:minLines="9"
+        app:layout_constraintTop_toBottomOf="@+id/tv_suggest_context"
+        android:layout_width="match_parent"
+        android:singleLine="false"
+        android:background="@drawable/clshape"
+        android:textColor="#595959"
+        android:padding="3dp"
+        android:gravity="left|top"
+        android:layout_height="200dp" />
+    <Button
+        android:id="@+id/bt_suggest_submit"
+        android:background="@drawable/etshape"
+        android:layout_width="wrap_content"
+        android:textSize="25dp"
+        android:text="提交"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

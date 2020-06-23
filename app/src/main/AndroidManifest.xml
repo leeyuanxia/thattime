@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="demo.zcgc.com.thattime">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- windowmanager -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 请求访问使用照相设备 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 8.0版本安装文件权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:name=".Application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MoreActivity" />
+        <activity
+            android:name=".activity.AddItemActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity
+            android:name=".activity.RepeatActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.RemindActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.ColorActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.SuggestActivity" />
+        <!--
+            <activity
+            android:name=".activity.SelectTimeActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.RemindSettingActivity" />
+        <activity android:name=".activity.pointActivity" />
+        <activity
+            android:name=".activity.SuggestActivity"
+            tools:ignore="DuplicateActivity" />
+        <!-- service -->
+        <service
+            android:name=".service.TimeRemindService"
+            android:exported="true"
+            android:process=":TimeService" />
+        <service
+            android:name=".service.DayRemindService"
+            android:process=":DayService" />
+        <service android:name=".service.CancelNoticeService"
+            android:process=":CancelService"
+            />
+        <service android:name=".service.UpdateWidgetService"/>
+        <!-- Receiver -->
+        <receiver android:name=".BroadcastReceiver.AlarmReceiver" />
+        <receiver android:name=".BroadcastReceiver.DayReceiver" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="demo.zcgc.com.thattime.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver android:name=".Widget.DesktopWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/desktop_widget_info" />
+        </receiver>
+
+        <activity android:name=".Widget.DesktopWidgetConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

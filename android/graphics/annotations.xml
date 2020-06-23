@@ -1,0 +1,5 @@
+<root>
+    <item name='android.graphics.BitmapFactory'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:padding="10dp"
+    tools:context=".activity.RemindSettingActivity">
+
+    <ImageView
+        android:id="@+id/iv_Remind_setting_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/selector_back_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="提醒设置"
+        android:textColor="#f39c12"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Remind_setting_back"
+        app:layout_constraintLeft_toRightOf="@+id/iv_Remind_setting_back"
+        app:layout_constraintTop_toTopOf="@+id/iv_Remind_setting_back" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#f39c12"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Remind_setting_back" />
+
+    <TextView
+        android:id="@+id/tv_healthy_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="健康提醒"
+        android:textColor="#4d4e46"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_healthy_remind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/clshape"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_healthy_remind">
+
+        <TextView
+            android:id="@+id/tv_offandon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="健康提醒开关"
+            android:textColor="#f39c12"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <demo.zcgc.com.thattime.engine.DrawableSwitch xmlns:lh2="http://schemas.android.com/apk/res/demo.zcgc.com.thattime"
+            android:id="@+id/drawableSwitch"
+            android:layout_width="40dp"
+            android:layout_height="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            lh2:circleColor="#F9F9F9"
+            lh2:isSwitchOn="false"
+            lh2:radius="8dp"
+            lh2:switchOffColor="#D8D8D8"
+            lh2:switchOnColor="#6AB344"
+            lh2:textColor="#1C1C0F" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_day_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="纪念日提醒"
+        android:textColor="#4d4e46"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_healthy_remind" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_day_remind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/clshape"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_day_remind">
+
+        <TextView
+            android:id="@+id/tv_day_offon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纪念日提醒开关"
+            android:textColor="#f39c12"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <demo.zcgc.com.thattime.engine.DrawableSwitch xmlns:lh2="http://schemas.android.com/apk/res/demo.zcgc.com.thattime"
+            android:id="@+id/drawableSwitch2"
+            android:layout_width="40dp"
+            android:layout_height="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            lh2:circleColor="#F9F9F9"
+            lh2:isSwitchOn="false"
+            lh2:radius="8dp"
+            lh2:switchOffColor="#D8D8D8"
+            lh2:switchOnColor="#6AB344"
+            lh2:textColor="#1C1C0F" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_time_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/clshape"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_day_remind">
+
+        <TextView
+            android:id="@+id/tv_time_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="设置提醒时间"
+            android:textColor="#f39c12"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_selected_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="8点"
+            android:textColor="#8a8a8a"
+            android:textSize="13dp"
+            app:layout_constraintLeft_toRightOf="@+id/tv_time_select"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_select_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_expand_more_black_24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_select">
+            <ListView
+                android:id="@+id/lv_time_down"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+<TextView
+    android:id="@+id/tv_attention"
+    android:text="@string/nolonger_remind_text"
+    android:textColor="#f39c12"
+    android:textSize="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

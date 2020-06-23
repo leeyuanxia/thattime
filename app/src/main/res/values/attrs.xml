@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="demo.zcgc.com.thattime.view.SettingItemView">
+        <attr name="destitle" format="string"/>
+        <attr name="desoff" format="string"/>
+        <attr name="deson" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="drawableSwitch">
+        <attr name="radius" format="dimension" />
+        <attr name="switchOnColor" format="color" />
+        <attr name="switchOffColor" format="color" />
+        <attr name="circleColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="isSwitchOn" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:background="#fff"
+    android:padding="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:id="@+id/tv_dialog_des"
+    android:textColor="#000"
+    android:text="提醒"
+    android:textSize="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="25dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/nolonger_remind_text"
+        android:singleLine="false"
+        android:textColor="#000"
+        android:id="@+id/tv_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:text="不再提醒"
+        android:id="@+id/cb_noremind"
+        android:textColor="#f39c12"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

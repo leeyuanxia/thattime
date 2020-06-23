@@ -1,0 +1,5 @@
+<root>
+    <item name='rx.android.schedulers.AndroidSchedulers'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>
